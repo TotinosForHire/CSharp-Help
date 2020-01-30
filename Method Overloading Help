@@ -1,0 +1,27 @@
+using System;
+
+namespace MethodOverloading
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      NamePets("Nikky", "Kalli");//prints the phrase 2 pets
+      NamePets("Nikky", "Kalli", "Olivia");//prints the phrase with 3 pets
+      NamePets();//prints a seperate phrase with no pets 
+    }
+    static void NamePets(string firstName, string secondName)
+    {
+      Console.WriteLine($"Your pets {firstName} and {secondName} will be joining your voyage across space!");//this prints when you have two
+    }
+    static void NamePets(string firstName, string secondName, string thirdName)
+    {
+      Console.WriteLine($"Your pets {firstName}, {secondName}, and {thirdName} will be joining your voyage across space!");//this prints when you write 3 pets
+    }
+    static void NamePets()
+    {
+      Console.WriteLine("Haha no pets loser");//this prints when you put no pets
+    }
+    
+  }
+}
